@@ -1,0 +1,50 @@
+page-list {
+  .arrow-right {
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+
+    border-right: 30px solid darkgoldenrod;
+  }
+  .base {
+    background: darkgoldenrod;
+    display: inline-block;
+    height: 40px;
+    margin-left: 20px;
+    margin-top: 40px;
+    position: relative;
+    width: 50px;
+  }
+  .base:before {
+    border-top: 30px solid darkgoldenrod;
+    border-bottom: 30px solid transparent;
+    border-right: 30px solid transparent;
+    content: "";
+    height: 0;
+    left: 0;
+    position: absolute;
+    top: -35px;
+    width: 0;
+  }
+  .pointer {
+    width: 50px;
+    height: 40px;
+    position: relative;
+    background: darkgoldenrod;
+  }
+
+  .pointer:before {
+    content: "  g";
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 20px solid darkgoldenrod;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+  }
+
+
+}

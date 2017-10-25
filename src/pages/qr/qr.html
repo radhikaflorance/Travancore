@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Hands free shopping</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="myBgg" padding>
+
+
+    <h5> Choose your option:</h5>
+    <br>
+    <p text-wrap>To deposit your luggage to the counter click here and scan the QR code</p>
+
+
+
+  <button  id="blackcircle" ion-button (click)="createCode()">Deposit</button>
+
+  <br>
+  <br>
+  <p text-wrap> To collect your luggage from the counter click here and scan the QR code</p>
+  <button id="goldcircle" ion-button  (click)="scanCode()" color="secondary">Collect</button>
+
+  <ion-card *ngIf="createdCode">
+    <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
+    <ion-card-content>
+      <p>Value: {{ createdCode }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="scannedCode">
+    <ion-card-content>
+      Result from Scan: {{ scannedCode }}
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

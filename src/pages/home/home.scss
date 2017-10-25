@@ -1,0 +1,121 @@
+page-home {
+  //.myBg {
+  //  background-color: goldenrod;
+  //}
+
+  .toolbar-background {
+    background-color: black;
+  }
+  //#myBg {
+  //  background-color: darkgoldenrod;
+  //}
+  //.background {
+  //  background-color:darkgoldenrod;
+  //  background-size: cover;
+  //
+  //}
+
+  #carousel {
+    width: 100%;
+    height:220px;
+    background:  url("https://akhillevakumar.000webhostapp.com/bg.php");
+    overflow-x: scroll;
+    overflow-y: hidden;
+    overflow: visible;
+    white-space:nowrap;
+    background-size: cover;
+  }
+
+  #carousel .slide {
+    height: 150px;
+
+    box-shadow: 1px 1px 10px #999;
+    margin: 6px;
+
+    cursor: pointer;
+    display:inline-block;
+    *display:inline;/* For IE7*/
+    *zoom:10;/* For IE7*/
+    vertical-align:top;
+  }
+  .slider {
+    overflow-y: hidden;
+    max-height: 500px; /* approximate max height */
+
+    transition-property: all;
+    transition-duration: .5s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  }
+  .slider.closed {
+    max-height: 0;
+  }
+  .fablabelfamily
+  {
+    position: absolute;
+    width: 100%;
+    padding-right: 220px;
+    padding-bottom: 75px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: bold;
+  }
+  .fablabelfriend{
+    position: absolute;
+    width: 100%;
+    padding-right: 220px;
+    padding-bottom: 30px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-weight: bold;
+  }
+  .fablabelsports{
+    position: absolute;
+    width: 100%;
+    padding-right: 220px;
+    padding-bottom: 140px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-weight: bold;
+  }
+  #ListBackdrop{
+    background-color: white !important;
+    position: fixed !important;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    opacity: 0.8
+  }
+
+
+  .element {
+    display: inline-block;
+    vertical-align: middle;  /* vertical alignment of the inline element */
+    font: 16px/1 Arial sans-serif;        /* <-- reset the font property */
+  }
+  .search-4{
+    background-color: white;
+    border-radius: 25px;
+    width: 100%;
+    vertical-align: center;
+    white-space: nowrap;
+  }
+  .search-4 input#search{
+    width: 100%;
+    height: 25px;
+    background: white;
+    border: groove;
+    font-size: 8pt;
+    color: #DAA520;
+
+    float: left;
+    //color: #fff;
+    padding-left: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+  ::-webkit-input-placeholder { /* Chrome */
+    color: #b9a25f;
+  }
+}
+

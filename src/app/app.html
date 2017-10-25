@@ -1,0 +1,42 @@
+<ion-menu [content]="content" side="left" id="menu1">
+  <ion-content class="menubg">
+    <img src="assets/mot.jpeg" height="150" width="3500"/>
+    <ion-list inset menuClose>
+      <button class="menubg" style="color:white"   ion-item *ngFor="let c of menu1"(click)="menu()">
+        {{c.menu1}}
+      </button>
+      <button class="menubg" style="color:white"   ion-item *ngFor="let c of menu1"(click)="cmenu()">
+        {{c.menu2}}
+      </button>
+      <button class="menubg" style="color:white"   ion-item *ngFor="let c of menu1"(click)="ccmenu()">
+        {{c.menu3}}
+      </button>
+      <button class="menubg" style="color:white"   ion-item *ngFor="let c of menu1"(click)="menuu()">
+        {{c.menu4}}
+      </button>
+      <button class="menubg" style="color:white"   ion-item *ngFor="let c of menu1"(click)="parking()">
+        {{c.menu5}}
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-menu [content]="content" side="right" id="menu2">
+  <ion-header class="myBg">
+    <ion-toolbar >
+      <ion-title *ngIf="username == null;else title">Welcome user</ion-title>
+    </ion-toolbar>
+    <ng-template #title style="font:Algerian" >
+      <font color="#e9fddc">  Welcome {{username}}</font>
+    </ng-template>
+  </ion-header>
+  <ion-content>
+
+    <div *ngIf="username == null;else login">
+      <button (click)="Login()" ion-button round menuClose> Add Your Profile</button>
+    </div>
+    <ng-template #login>
+      <button (click)="Login()" ion-button round menuClose> Edit Your Profile</button>
+    </ng-template>
+  </ion-content>
+</ion-menu>
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

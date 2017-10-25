@@ -1,0 +1,28 @@
+page-qr {
+  #blackcircle {
+    width: 150px;
+    height: 150px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 75px;
+    background: black;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+
+
+  }
+  #goldcircle {
+    width: 150px;
+    height: 150px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 75px;
+    background:darkgoldenrod;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+}

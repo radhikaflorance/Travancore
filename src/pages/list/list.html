@@ -1,0 +1,115 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Shops</ion-title>
+    </ion-navbar>
+    <div>
+      <ion-searchbar (ionInput)="getItems($event)" placeholder="Find shops/Get an offer"
+                     (ionClear)="onClear($event)"></ion-searchbar>
+    </div>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <div padding>
+    <ion-segment [(ngModel)]="pet">
+      <ion-segment-button value="kittens">
+        Shops
+      </ion-segment-button>
+      <ion-segment-button value="puppies">
+        Offers
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div [ngSwitch]="pet">
+    <ion-list *ngSwitchCase="'puppies'">
+      <div *ngFor="let c of offers">
+        <img src="{{c.icon}}">
+      </div>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'kittens'">
+
+      <ion-item class="myBgg">
+        <ion-list inset>
+          <button class="myBgg" ion-item *ngFor="let c of countries"(click)="shopDetails(event,c)">
+
+            <ion-avatar item-left>
+              <img src="{{c.logo}}">
+            </ion-avatar>
+            {{c.name}}
+            <ion-icon align="center" item-right class="pointer"> <span >{{c.floor}}</span></ion-icon>
+          </button>
+        </ion-list>
+
+      </ion-item>
+      ...
+    </ion-list>
+  </div>
+
+
+
+
+</ion-content><ion-header>
+  <ion-toolbar>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Shops</ion-title>
+    </ion-navbar>
+    <div>
+      <ion-searchbar (ionInput)="getItems($event)" placeholder="Find shops/Get an offer"
+                     (ionClear)="onClear($event)"></ion-searchbar>
+    </div>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <div padding>
+    <ion-segment [(ngModel)]="pet">
+      <ion-segment-button value="kittens">
+        Shops
+      </ion-segment-button>
+      <ion-segment-button value="puppies">
+        Offers
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div [ngSwitch]="pet">
+    <ion-list *ngSwitchCase="'puppies'">
+      <div *ngFor="let c of offers">
+        <img src="{{c.icon}}">
+      </div>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'kittens'">
+
+      <ion-item class="myBgg">
+        <ion-list inset>
+          <button class="myBgg" ion-item *ngFor="let c of countries"(click)="shopDetails(event,c)">
+
+            <ion-avatar item-left>
+              <img src="{{c.logo}}">
+            </ion-avatar>
+            {{c.name}}
+            <ion-icon align="center" item-right class="pointer"> <span >{{c.floor}}</span></ion-icon>
+          </button>
+        </ion-list>
+
+      </ion-item>
+      ...
+    </ion-list>
+  </div>
+
+
+
+
+</ion-content>

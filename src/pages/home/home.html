@@ -1,0 +1,104 @@
+<ion-header>
+  <ion-toolbar class="myBg">
+    <table>
+      <tr>
+        <td width="25%" >
+          <ion-buttons left>
+            <button ion-button icon-only (click)="openMenu('main')">
+              <ion-icon style="color:#b9a25f" name="menu"></ion-icon>
+            </button>
+          </ion-buttons>
+        </td>
+        <td width="25%">
+          <ion-title align="center" width="100%" *ngFor="let item of about"><font color="#b9a25f" >{{item.name}}</font></ion-title>
+        </td>
+        <td width="50%" align="right">
+          <ion-buttons >
+            <button ion-button icon-only (click)="openMenu('user')">
+              <ion-icon style="color:#b9a25f" name="contact"></ion-icon>
+            </button>
+          </ion-buttons></td>
+      </tr>
+      <tr>
+        <td>
+        </td>
+        <td width="100%">
+          <div>
+            <div class="box" width="100%">
+              <div class="search-4" width="100%">
+                <!--<ion-searchbar width="100%" placeholder="Search for Shops and Events" [(ngModel)]="myInput"[showCancelButton]="shouldShowCancel"(ionInput)="onInput($event)"(ionCancel)="onCancel($event)"></ion-searchbar>-->
+                <input  type="search" id="search" placeholder="Search for Shops and Events" (ionInput)="getItems($event)" (ionClear)="onClear($event)"/>
+                <!--<button class="icon"><i class="fa fa-search"></i></button>-->
+              </div>
+            </div>
+            <ion-list>
+              <ion-item *ngFor="let item of items">
+                {{ item }}
+              </ion-item>
+            </ion-list>
+          </div>
+        </td>
+        <td>
+        </td>
+      </tr>
+    </table>
+  </ion-toolbar>
+</ion-header>
+<ion-content style="background-color:#B9A25F">
+  <div padding-left="5px" style="color:black;font-size:8px">
+    <marquee behavior="scroll" scrollamount="1" direction="up"  *ngFor="let c of messages" >
+      <div>{{c.msg1}}</div>
+      <div>{{c.msg2}}</div>
+      <div>{{c.msg3}}</div>
+      <div>{{c.msg4}}</div>
+    </marquee>
+  </div>
+  <div id="carousel">
+    <div>
+      <p padding-left="5px"padding-top="5px" style="color:white;font-size: small">Hot Deals of the Day</p>
+    </div>
+    <div >
+      <ion-slides padding-left="2px"   loop="true" >
+        <ion-slide  >
+          <ion-row class="slide"  *ngFor="let slide of offersList" (click)="shopDetails(event,slide)">
+            <img style="height: 350px;width:90px " src="{{slide.icon}}" />
+          </ion-row>
+        </ion-slide>
+      </ion-slides>
+    </div>
+  </div>
+
+  <div padding-top="1px"style="background-color:#F4EDD1;height: auto" >
+<ion-card>
+
+        <h3 padding-left="0.5px"padding-top="0.5px" style="color:black;font-size: small">Our offers</h3>
+
+        <ion-slides zoom="true" loop="true" direction="top" style="background-color:#F4EDD1;height: auto;width:100%">
+          <ion-slide >
+
+              <ion-col *ngFor="let slide of offersList" (click)="shopDetails(event,slide)">
+                <h5  style="color:black;font-size:x-small"> {{slide.shopname}}</h5>
+                <img style="height: 100px;width:100% " src="{{slide.icon}}" />
+
+              </ion-col>
+
+
+          </ion-slide>
+          <!--<ion-slides  loop="true">-->
+          <!--<ion-slide>-->
+          <!--<ion-col class="slide"  *ngFor="let slide of offersList" (click)="shopDetails(event,c)">-->
+
+          <!--<img style="height: 45px;width:100% " src="{{slide.icon}}" />-->
+
+          <!--</ion-col>-->
+          <!--</ion-slide>-->
+        </ion-slides>
+</ion-card>
+
+  </div>
+</ion-content>
+
+
+
+
+
